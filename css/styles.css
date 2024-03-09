@@ -604,6 +604,8 @@ button {
   height: 270px;
   text-align: left;
   border-radius: 15px;
+  position: relative;
+  overflow: hidden;
 }
 
 .card-item img {
@@ -633,6 +635,64 @@ button {
   letter-spacing: -0.02em;
   text-transform: uppercase;
   padding-left: 28px;
+}
+.taste-card-overlay {
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translatey(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #111111;
+}
+
+.card-item:hover .taste-card-overlay {
+  transform: translate(0);
+}
+
+.taste-card-content {
+  padding: 25px;
+}
+.taste-overlay-header {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.00166;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.taste-overlay-name-benefits-block {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  margin-bottom: 14px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.taste-overlay-border {
+  border-radius: 35px;
+  padding: 6px 16px 6px 16px;
+}
+
+.taste-overlay-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.0014;
+}
+
+.taste-overlay-name-benefits-block p:nth-child(1) {
+  color: white;
+  background-color: #fd9222;
+}
+
+.taste-overlay-name-benefits-block p:nth-child(2) {
+  color: black;
+  background-color: #fafafa;
+  border: solid 1px #fd9222;
 }
 @media screen and (min-width: 768px) {
   .container-taste {
@@ -664,6 +724,12 @@ button {
     margin: 0 auto;
   }
 
+  .taste-overlay-name-benefits-block {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
   .card-list li:nth-child(3) {
     order: 2;
   }
@@ -687,6 +753,12 @@ button {
   .taste-card-block {
     width: 1136px;
     margin: 0 auto;
+  }
+  .taste-overlay-name-benefits-block {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
   }
   .card-list li:nth-child(3) {
     order: initial;
