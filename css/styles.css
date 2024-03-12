@@ -681,7 +681,7 @@ button {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.29;
-  letter-spacing: -0.0014;
+  letter-spacing: -0.02em;
 }
 
 .taste-overlay-name-benefits-block p:nth-child(1) {
@@ -744,15 +744,26 @@ button {
   .taste-header {
     font-size: 24px;
   }
+  .card-item {
+    width: 270px;
+    height: 270px;
+  }
+
+  .card-item img {
+    width: 206px;
+  }
   .card-list {
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    gap: 20px;
+    gap: 19px;
   }
   .taste-card-block {
     width: 1136px;
     margin: 0 auto;
+  }
+  .taste-card-content {
+    padding: 20px;
   }
   .taste-overlay-name-benefits-block {
     font-weight: 400;
@@ -766,3 +777,94 @@ button {
 }
 
 /*================================== /// TASTE SECTION ================================== */
+/*================================== HOW SECTION ================================== */
+/* .how-its-made {
+  background-color: #e9e9e9;
+} */
+.container-how-its-made {
+  padding: 30px 20px 30px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 335px;
+  background-color: #fff;
+  text-align: center;
+}
+.header-how-its-made {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.how-img {
+  margin-bottom: 20px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.try-block {
+  background-color: #ffffff;
+  padding: 20px 15px 20px 15px;
+  border-radius: 15px;
+}
+.try-chocolate-text {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+  padding-bottom: 20px;
+}
+.try-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 15px;
+}
+.try-list li {
+  list-style-type: disc;
+}
+.try-item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+@media screen and (min-width: 768px) {
+  .container-how-its-made {
+    padding: 40px 77px 40px 77px;
+    min-width: 614px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header-how-its-made {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+  .try-block {
+    text-align: left;
+    padding: 35px 20px 35px 20px;
+  }
+  .try-chocolate-text {
+    padding-bottom: 28px;
+    width: 340px
+}
+@media screen and (min-width: 1200px) {
+  .container-how-its-made {
+    max-width: 1136px;
+    padding: 43px 32px 43px 32px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .img-try-block{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .try-block {
+    text-align: left;
+    width: 516px;
+    padding: 35px 20px 35px 20px;
+  }
+}
+/*================================== ///HOW SECTION ================================== */
