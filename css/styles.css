@@ -747,24 +747,46 @@ button {
   line-height: 129%;
   letter-spacing: -0.02em;
   color: var(--black);
+  position: relative;
+}
+.dot {
+  width: 8px;
+  background-color: #4c4c4c;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: -20px;
+  border-radius: 1px #eceded;
 }
 
 @media screen and (min-width: 768px) {
   .container-how-made {
-    padding: 40px 77px 40px 77px;
+    padding: 40px 32px 40px 32px;
     min-width: 704px;
     margin-left: auto;
     margin-right: auto;
     background-color: #f5f4f4;
+  }
+  .img-how-made {
+    margin-left: auto;
+    margin-right: auto;
   }
   .how-made-list {
     justify-content: center;
     align-items: flex-start;
   }
   .how-made-text {
-    padding: 30px 30px 0 30px;
+    width: 554px;
+    padding: 30px 30px 30px 30px;
     background-color: #ffffff;
     border-radius: 20px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .how-made-small-header {
@@ -786,13 +808,15 @@ button {
     flex-direction: row;
     gap: 20px;
   }
+  .img-how-made {
+    margin-bottom: 0;
+  }
 
   .how-made-text {
     padding: 30px 20px 30px 50px;
     background-color: #ffffff;
     border-radius: 20px;
-    width: 516px;
-    height: 400px;
+    /* height: 400px; */
   }
 }
 
