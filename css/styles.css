@@ -1104,6 +1104,9 @@ button {
 .footer-address-block {
   font-style: normal;
 }
+.contact-us-list-item {
+  pointer-events: all;
+}
 @media screen and (min-width: 768px) {
   .footer-container {
     padding: 50px 32px 50px 32px;
