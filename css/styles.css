@@ -567,7 +567,6 @@ button {
   margin-right: auto;
   max-width: 335px;
   background-color: #fff;
-  background-color: #f5f4f4;
 }
 .taste-header {
   font-weight: 600;
@@ -605,6 +604,8 @@ button {
   height: 270px;
   text-align: left;
   border-radius: 15px;
+  position: relative;
+  overflow: hidden;
 }
 
 .card-item img {
@@ -634,6 +635,64 @@ button {
   letter-spacing: -0.02em;
   text-transform: uppercase;
   padding-left: 28px;
+}
+.taste-card-overlay {
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translatey(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #111111;
+}
+
+.card-item:hover .taste-card-overlay {
+  transform: translate(0);
+}
+
+.taste-card-content {
+  padding: 25px;
+}
+.taste-overlay-header {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.00166;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.taste-overlay-name-benefits-block {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  margin-bottom: 14px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.taste-overlay-border {
+  border-radius: 35px;
+  padding: 6px 16px 6px 16px;
+}
+
+.taste-overlay-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+
+.taste-overlay-name-benefits-block p:nth-child(1) {
+  color: white;
+  background-color: #fd9222;
+}
+
+.taste-overlay-name-benefits-block p:nth-child(2) {
+  color: black;
+  background-color: #fafafa;
+  border: solid 1px #fd9222;
 }
 @media screen and (min-width: 768px) {
   .container-taste {
@@ -665,6 +724,12 @@ button {
     margin: 0 auto;
   }
 
+  .taste-overlay-name-benefits-block {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
   .card-list li:nth-child(3) {
     order: 2;
   }
@@ -679,21 +744,39 @@ button {
   .taste-header {
     font-size: 24px;
   }
+  .card-item {
+    width: 270px;
+    height: 270px;
+  }
+
+  .card-item img {
+    width: 206px;
+  }
   .card-list {
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    gap: 20px;
+    gap: 19px;
   }
   .taste-card-block {
     width: 1136px;
     margin: 0 auto;
+  }
+  .taste-card-content {
+    padding: 20px;
+  }
+  .taste-overlay-name-benefits-block {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
   }
   .card-list li:nth-child(3) {
     order: initial;
   }
 }
 
+/*================================== /// TASTE SECTION ================================== */
 /*================================== /// TASTE SECTION ================================== */
 /*==================================  HOWITSMADE  SECTION ================================== */
 
@@ -821,3 +904,160 @@ button {
 }
 
 /*==================================  /// HOWITSMADE SECTION ================================== */
+/*================================== REVIEW SECTION ================================== */
+
+.container-review {
+  padding: 25px 20px 30px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 335px;
+  background-color: transparent;
+  text-align: center;
+}
+.review-header {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  padding-bottom: 72px;
+}
+.review-list {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.review-item {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 58px 10px 40px 10px;
+}
+.review-name {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+  padding-bottom: 24px;
+}
+.review-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: rgba(17, 17, 17, 0.7);
+}
+.review-photo {
+  position: absolute;
+  left: 40%;
+  /* calc(50% - 32px); */
+  top: -40px;
+  border-radius: 50%;
+}
+.review-btn {
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  padding: 12px 28px 12px 28px;
+  border: solid 1px #fd9222;
+  border-radius: 100px;
+  background-color: transparent;
+  margin-top: 40px;
+}
+.review-btn:hover {
+  background-color: #fd9222;
+  color: #fafafa;
+}
+.review-list li:nth-child(2) {
+  display: none;
+}
+.review-list li:nth-child(3) {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .container-review {
+    padding: 32px 0px 32px 0px;
+    min-width: 704px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .review-list li:nth-child(2) {
+    display: block;
+  }
+  .review-item {
+    width: 344px;
+    padding: 58px 10px 40px 10px;
+  }
+  .review-text {
+    width: 312px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container-review {
+    max-width: 1136px;
+    padding: 43px 0px 43px 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .review-list li:nth-child(3) {
+    display: block;
+  }
+  .review-item {
+    width: 360px;
+    padding: 58px 10px 40px 10px;
+  }
+}
+/*================================== ///  REVIEW SECTION ================================== */
+/*==================================  FOOTER SECTION ================================== */
+
+.footer {
+  background-color: #1e1823;
+}
+.container-review {
+  padding: 25px 20px 30px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 335px;
+  background-color: transparent;
+  text-align: center;
+}
+.footer-header {
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  width: 300px;
+}
+.footer-address {
+  padding-bottom: 14px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  /* text-align: center; */
+  color: #ffffff;
+}
+.footer-contacts {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  /* text-align: center; */
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+.footer-navigation {
+  margin-top: 32px;
+  color: #ffffff;
+}
+.footer-navigation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+}
