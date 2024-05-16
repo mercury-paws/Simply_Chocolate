@@ -13,6 +13,7 @@ a {
   text-decoration-line: none;
   text-decoration: none;
   transition: color 250ms linear;
+  color: inherit;
 }
 a:hover,
 a:focus,
@@ -327,6 +328,10 @@ button {
   padding: 6px;
   width: 16px;
   height: 16px;
+}
+.overlayy {
+  overflow-y: auto;
+  height: 160px;
 }
 @media screen and (max-width: 767px) and (min-resolution: 192dpi) {
   .hero {
@@ -963,6 +968,7 @@ button {
   border-radius: 100px;
   background-color: transparent;
   margin-top: 40px;
+  transition: background-color 250ms linear, color 250ms linear;
 }
 .review-btn:hover {
   background-color: #fd9222;
