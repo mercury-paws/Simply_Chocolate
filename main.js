@@ -10,7 +10,7 @@ function updateVisibility() {
   });
 }
 
-function nextImage() {
+function nextReview() {
   currentIndex++;
   if (currentIndex > reviews.length - 1) {
     currentIndex = reviews.length - 1;
@@ -18,7 +18,7 @@ function nextImage() {
   updateVisibility();
 }
 
-function prevImage() {
+function prevReview() {
   currentIndex--;
   if (currentIndex < 0) {
     currentIndex = 0;
@@ -26,8 +26,8 @@ function prevImage() {
   updateVisibility();
 }
 
-nextBtn.addEventListener("click", nextImage);
-prevBtn.addEventListener("click", prevImage);
+nextBtn.addEventListener("click", nextReview);
+prevBtn.addEventListener("click", prevReview);
 
 // Initially show the first review
 updateVisibility();

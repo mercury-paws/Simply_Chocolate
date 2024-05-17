@@ -322,6 +322,7 @@ button {
   height: 28px;
   fill: #fd9222;
   text-align: center;
+  pointer-events: all;
 }
 .scroll-down {
   fill: #fd9222;
@@ -1019,6 +1020,13 @@ button {
   top: -3px;
   rotate: -90deg;
 }
+.review-item {
+  display: none;
+}
+
+.review-item.active {
+  display: block;
+}
 
 @media screen and (min-width: 768px) {
   .container-review {
@@ -1053,13 +1061,6 @@ button {
   .review-item {
     width: 360px;
     padding: 58px 10px 40px 10px;
-  }
-  .review-item {
-    display: none;
-  }
-
-  .review-item.active {
-    display: block;
   }
 }
 /*================================== ///  REVIEW SECTION ================================== */
