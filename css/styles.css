@@ -917,7 +917,11 @@ button {
   margin-right: auto;
   max-width: 335px;
   background-color: transparent;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* gap: 10px; */
 }
 .review-header {
   font-weight: 600;
@@ -931,6 +935,7 @@ button {
   display: flex;
   flex-direction: row;
   gap: 16px;
+  justify-content: center;
 }
 
 .review-item {
@@ -938,6 +943,11 @@ button {
   background-color: #ffffff;
   border-radius: 15px;
   padding: 58px 10px 40px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0, auto;
 }
 .review-name {
   font-weight: 600;
@@ -951,6 +961,7 @@ button {
   line-height: 1.29;
   letter-spacing: -0.02em;
   color: rgba(17, 17, 17, 0.7);
+  text-align: center;
 }
 .review-photo {
   position: absolute;
@@ -974,12 +985,41 @@ button {
   background-color: #fd9222;
   color: #fafafa;
 }
-.review-list li:nth-child(2) {
-  display: none;
+.reviews-block-slider {
+  position: relative;
+  width: 330px;
 }
-.review-list li:nth-child(3) {
-  display: none;
+#prevBtn {
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
 }
+.scroll-down.left {
+  position: absolute;
+  right: -2px;
+  top: -3px;
+  rotate: 90deg;
+}
+#nextBtn {
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+}
+.scroll-down.right {
+  position: absolute;
+  left: -2px;
+  top: -3px;
+  rotate: -90deg;
+}
+
 @media screen and (min-width: 768px) {
   .container-review {
     padding: 32px 0px 32px 0px;
@@ -987,15 +1027,14 @@ button {
     margin-left: auto;
     margin-right: auto;
   }
-  .review-list li:nth-child(2) {
-    display: block;
+
+  .reviews-block-slider {
+    position: relative;
+    width: 500px;
   }
   .review-item {
     width: 344px;
     padding: 58px 10px 40px 10px;
-  }
-  .review-text {
-    width: 312px;
   }
 }
 
@@ -1006,12 +1045,21 @@ button {
     margin-left: auto;
     margin-right: auto;
   }
-  .review-list li:nth-child(3) {
-    display: block;
+  .reviews-block-slider {
+    position: relative;
+    width: 500px;
   }
+
   .review-item {
     width: 360px;
     padding: 58px 10px 40px 10px;
+  }
+  .review-item {
+    display: none;
+  }
+
+  .review-item.active {
+    display: block;
   }
 }
 /*================================== ///  REVIEW SECTION ================================== */
