@@ -305,10 +305,10 @@
           <div class="how-made-pic-text-block">
             <img
               srcset="
-                ./images/howmade/mob.jpg      335w,
-                ./images/howmade/comp.jpg     600w,
+                ./images/howmade/comp@2x.jpg 1200w,
                 ./images/howmade/mob@2x.jpg   670w,
-                ./images/howmade/comp@2x.jpg 1200w
+                ./images/howmade/mob.jpg      335w,
+                ./images/howmade/comp.jpg     600w
               "
               sizes="(min-width: 768px) 600px, (max-width: 767px) 335px"
               src="./images/howmade/mob.jpg"
@@ -493,6 +493,97 @@
         </div>
       </div>
     </footer>
-    <script src="./main.js" defer type="module"></script>
+
+    <script src="./js/swiper.js" defer type="module"></script>
+    <div class="backdrop-leave-comment-overlay">
+      <div class="modal-leave-comment">
+        <button class="modal-close-btn">
+          <svg class="modal-close-icon">
+            <use href="./images/icons.svg#icon-x-close"></use>
+          </svg>
+        </button>
+        <h3 class="modal-header">
+          leave a review <br />
+          about <span class="stroke">our chocolate</span>
+        </h3>
+        <div class="modal-input-textarea-block">
+          <div class="modal-input-block">
+            <label class="modal-name" for="name-input">Name</label>
+            <input
+              class="modal-input"
+              id="name-input"
+              type="text"
+              name="modal-name"
+              required
+            />
+            <svg class="modal-icon">
+              <use href="./images/icons.svg#icon-user"></use>
+            </svg>
+          </div>
+          <div class="modal-input-block">
+            <label class="modal-name" for="email-input">Email</label>
+            <input
+              class="modal-input"
+              id="email-input"
+              type="text"
+              name="modal-email"
+              required
+            />
+            <svg class="modal-icon">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+          </div>
+          <div class="modal-input-block">
+            <label class="modal-name" for="phone-input">Phone number</label>
+            <input
+              class="modal-input"
+              id="phone-input"
+              type="text"
+              name="modal-phone"
+              required
+            />
+            <svg class="modal-icon">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+          </div>
+          <div class="modal-input-block">
+            <label class="modal-name" for="textarea">Comment</label>
+            <textarea
+              class="modal-input textarea"
+              id="textarea"
+              name="textarea"
+              rows="4"
+              placeholder="Enter text"
+              style="resize: none"
+            ></textarea>
+          </div>
+        </div>
+        <div class="modal-policy-block">
+          <input
+            class="modal-checkbox visually-hidden"
+            id="modal-check"
+            value="true"
+            type="checkbox"
+            required
+          />
+          <label class="modal-check" for="modal-check">
+            <span class="modal-icon-fi"
+              ><svg class="modal-checkbox-icon">
+                <use href="./images/icons.svg#icon-checkmark"></use>
+              </svg>
+              <svg class="icon">
+                <use href="./images/icons.svg#icon"></use>
+              </svg>
+            </span>
+            <p class="modal-accept-text">
+              I accept the terms and conditions of the
+              <a class="modal-privacy-policy" href="">Privacy Policy</a>
+            </p>
+          </label>
+        </div>
+        <button type="submit" class="modal-submit-btn">Send</button>
+      </div>
+    </div>
+    <script src="./js/index.js" defer type="module"></script>
   </body>
 </html>
