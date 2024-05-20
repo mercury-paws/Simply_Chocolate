@@ -134,7 +134,7 @@ button {
   visibility: visible;
   transform: translateX(0%);
   opacity: 1;
-  pointer-events: all;
+  pointer-events: auto;
 }
 .modal-user {
   width: 100%;
@@ -283,9 +283,10 @@ button {
   text-align: center;
   border-radius: 100px;
   border: 1px solid #fff;
-  width: 159px;
+  width: 149px;
   color: #fff;
   font-weight: 600;
+  padding-top: 12px;
   transition: border-color 250ms linear, color 250ms linear;
 }
 
@@ -387,7 +388,7 @@ button {
   }
 
   .how-button {
-    width: 183px;
+    width: 100px;
     padding: 14px 40px;
     font-weight: 600;
     transition: border-color 250ms linear, color 250ms linear;
@@ -1020,6 +1021,28 @@ button {
   top: -3px;
   rotate: -90deg;
 }
+
+.dot-list {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.dot-item {
+  width: 10px;
+  height: 10px;
+  background-color: #fd9222;
+  border-radius: 40%;
+}
+.dot-active {
+  width: 20px;
+}
+.dot-container {
+  margin-top: 15px;
+}
+/* .review-item {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+} */
 .review-item {
   display: none;
 }
@@ -1027,7 +1050,6 @@ button {
 .review-item.active {
   display: block;
 }
-
 @media screen and (min-width: 768px) {
   .container-review {
     padding: 32px 0px 32px 0px;
@@ -1367,6 +1389,9 @@ button {
   display: flex;
   flex-direction: row;
   gap: 30px;
+  justify-content: center;
+  align-items: center;
+  line-height: none;
 }
 
 .modal-checkbox:checked + .modal-check .modal-checkbox-icon {
@@ -1379,7 +1404,7 @@ button {
   position: absolute;
   fill: transparent;
   top: 13%;
-  left: 2%;
+  left: 3%;
 }
 .textarea {
   padding-left: 15px;
@@ -1424,4 +1449,91 @@ button {
 }
 .modal-close-btn:hover .modal-close-icon {
   stroke: #fd9222;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-leave-comment {
+    width: 517px;
+    height: 752px;
+  }
+  .modal-input {
+    width: 437px;
+  }
+
+  .modal-submit-btn {
+    width: 117px;
+    height: 45px;
+  }
+  .modal-header {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    width: 500px;
+    break-inside: unset;
+  }
+  .modal-input-block {
+    gap: 10px;
+  }
+
+  .modal-input-textarea-block {
+    gap: 20px;
+  }
+  .modal-input {
+    height: 38px;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+  }
+  .textarea {
+    width: 470px;
+    height: auto;
+  }
+  .modal-icon {
+    left: 4%;
+  }
+  .modal-policy-block {
+    margin-top: 35px;
+  }
+  .modal-accept-text {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+  }
+  .icon {
+    left: 0.8%;
+  }
+  .modal-name {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+  }
+  .modal-close-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .modal-icon {
+    width: 22px;
+    height: 22px;
+  }
+  .modal-input::placeholder {
+    font-size: 18px;
+  }
+
+  .modal-checkbox-icon {
+    width: 23px;
+    height: 23px;
+    top: -2px;
+    left: 1px;
+  }
+
+  .icon {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    fill: transparent;
+    top: 17%;
+    left: 1.2%;
+  }
 }
