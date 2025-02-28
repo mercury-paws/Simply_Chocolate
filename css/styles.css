@@ -299,14 +299,14 @@ button {
 .svg-and-buttons {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 14px;
   margin-top: 32px;
 }
 
 .scroll-svg {
   display: flex;
   gap: 12px;
-  margin-left: 20px;
+  margin-left: 30px;
   align-items: center;
 }
 .down-text {
